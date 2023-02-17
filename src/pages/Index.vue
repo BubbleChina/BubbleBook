@@ -1,6 +1,6 @@
 <template>
   <div class="header"><Header /></div>
-  <QRCodeVue value="Hello World" level="H" foreground="#ed9db2" />
+  <!-- <QRCodeVue value="Hello World" level="H" foreground="#ed9db2" /> -->
   <div class="container">
     <RouterView />
   </div>
@@ -23,5 +23,6 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+    overflow: hidden;
   }
 </style>
