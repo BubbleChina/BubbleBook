@@ -1,3 +1,3 @@
 # Bubble Book
 
-A toy.
+🎉Just for fun.✨
