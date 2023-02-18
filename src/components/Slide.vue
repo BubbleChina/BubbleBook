@@ -87,6 +87,8 @@
     console.log(someOne.value)
   }, 150)
   setTimeout(() => clearInterval(timer), 3300)
+
+  console.log("Just for fun.")
 </script>
 
 <style scoped>
