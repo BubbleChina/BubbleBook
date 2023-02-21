@@ -35,15 +35,17 @@
       </div>
     </div>
   </div>
-  <RouterView />
+  <Note />
+  <!-- <RouterView /> -->
 </template>
 
 <script setup lang="ts">
   import { RouterView } from "vue-router"
   import { ref, onMounted } from "vue"
-  import { useIsShowMsgStore } from "./store/showMsg"
+  import { useIsShowSthStore } from "./store/showSth"
+  import Note from "./pages/Note/Index.vue"
 
-  const isShowMsg = useIsShowMsgStore()
+  const isShowMsg = useIsShowSthStore()
   const { isShowMsgStore, closeMsg } = isShowMsg
 
   let showMsg = ref<boolean>(true)
