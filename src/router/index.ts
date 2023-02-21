@@ -1,43 +1,25 @@
-import { createRouter, createWebHistory } from "vue-router"
-import Index from "../pages/Index.vue"
-import Dashboard from "../pages/Dashboard.vue"
-import EditNote from "../pages/Note/EditNote.vue"
-import ShowNote from "../pages/Note/ShowNote.vue"
+import {
+  createRouter,
+  createWebHistory,
+  createWebHashHistory,
+} from "vue-router"
+import Note from "../pages/Note.vue"
 import NotFound from "../pages/NotFound.vue"
 
 const router = createRouter({
+  // hash router /#/
+  // history: createWebHashHistory(),
   history: createWebHistory(),
   routes: [
-    // {
-    //   path: "/",
-    //   redirect: window.localStorage.getItem("token") ? "/index" : "/sign_in",
-    // },
-    // {
-    //   path: "/index",
-    //   component: Index,
-    //   children: [
-    //     {
-    //       path: "",
-    //       component: Dashboard,
-    //     },
-    //   ],
-    // },
-    // {
-    //   path: "/user_center",
-    //   component: Index,
-    // },
     {
-      path: "/",
-      component: ShowNote,
+      path: "/note",
+      component: Note,
+      name: "show and edit note",
     },
     {
-      path: "/edit_note",
-      component: EditNote,
-    },
-    {
-      // path:"*",
+      // path: "*",
       // vue-router 4.x
-      path: "/:catchAll(.*)",
+      path: "/:catchall(.*)",
       component: NotFound,
     },
   ],

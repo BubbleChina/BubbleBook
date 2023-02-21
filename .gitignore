@@ -1,13 +1,8 @@
 .history
-.vscode
-.VSCodeCounter
 
 node_modules
-example
-
-dist
 
 auto-imports.d.ts
 components.d.ts
 
-package-lock.json
+pnpm-lock.yaml

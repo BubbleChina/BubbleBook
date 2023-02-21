@@ -1,3 +1,11 @@
 <template>
-  <h1>404 Not Found</h1>
+  <div class="title">404 Not Found</div>
 </template>
+
+<style scoped>
+  .title {
+    text-align: center;
+    font-size: 20vh;
+    line-height: 100vh;
+  }
+</style>
