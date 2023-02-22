@@ -4,24 +4,17 @@
   "description": "A toy.",
   "version": "0.0.1",
   "type": "module",
-  "author": {
-    "name": "BUBBLE",
-    "email": "Legends2020@qq.com"
-  },
+  "author": "BUBBLE",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@element-plus/icons-vue": "^2.0.10",
     "date-fns": "^2.29.3",
-    "element-plus": "^2.2.32",
     "nanoid": "^4.0.1",
     "pinia": "^2.0.32",
     "qrcode.vue": "^3.3.3",
-    "unplugin-auto-import": "^0.14.4",
-    "unplugin-vue-components": "^0.24.0",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
   },
