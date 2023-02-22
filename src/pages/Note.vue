@@ -3,11 +3,7 @@
     <div class="navigation" @click="showNote">
       <div><img :src="icon_logo" alt="" class="logo" /></div>
       username
-      <div>
-        <button>
-          <img :src="icon_edit" class="icon-edit" alt="edit" title="To edit!" />
-        </button>
-      </div>
+
       <div
         style="display: flex; justify-content: center; margin: 10px 0 10px 0"
       >
@@ -47,8 +43,8 @@
         />
       </div>
       <div style="margin: 20px 0 0 0">
-        <hr />
-        （づ￣3￣）づ╭❤️～
+        <div class="horizon">-----------</div>
+        ~~~///(^v^)\\\~~~
       </div>
       <div style="height: 100px" />
     </div>
@@ -62,6 +58,16 @@
             <div>{{ item.content }}</div>
             <div>by: {{ item.username }}</div>
             <hr />
+            <div>
+              <button>
+                <img
+                  :src="icon_edit"
+                  class="icon-edit"
+                  alt="edit"
+                  title="To edit!"
+                />
+              </button>
+            </div>
           </div>
         </div>
         <div style="height: 30px"></div>
@@ -146,7 +152,7 @@
     width: 20%;
     min-height: 100vh;
     text-align: center;
-    background-color: rgb(192, 187, 187);
+    background: linear-gradient(#8e9eab, #eef2f3);
     overflow: auto;
   }
   .logo {
@@ -159,10 +165,9 @@
     cursor: pointer;
     transition: 666ms;
   }
-
   .item:hover {
     background: rgb(229, 243, 238);
-    border-radius: 25px 2px 2px 12px;
+    border-radius: 25px 22px 2px 12px;
   }
 
   .item-select {
@@ -189,6 +194,12 @@
   .icon-more:active {
     background: black;
     border-radius: 50%;
+  }
+
+  .horizon {
+    width: 70%;
+    height: 1px;
+    margin: 0 auto;
   }
 
   .body {

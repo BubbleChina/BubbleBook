@@ -16,6 +16,7 @@
     "pinia": "^2.0.32",
     "qrcode.vue": "^3.3.3",
     "vue": "^3.2.47",
+    "vue-advanced-cropper": "^2.8.8",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
