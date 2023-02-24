@@ -74,7 +74,15 @@
         <hr />
         <div style="text-align: center">(u‿ฺu✿ฺ)</div>
       </div>
-      <div v-else>edit note</div>
+      <div v-else>
+        <form @submit.prevent="">
+          title:<input /><br />
+          date:<input /><br />
+          content:<input /><br />
+          author:<input /><br />
+          <button>submit</button>
+        </form>
+      </div>
     </div>
   </div>
 </template>
