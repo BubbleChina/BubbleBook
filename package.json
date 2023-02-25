@@ -11,28 +11,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@egjs/vue3-flicking": "^4.10.6",
-    "@egjs/vue3-infinitegrid": "^4.8.1",
-    "@riophae/vue-treeselect": "^0.4.0",
-    "@vueuse/core": "^9.13.0",
-    "ag-grid-community": "^29.1.0",
-    "ag-grid-vue3": "^29.1.0",
-    "date-fns": "^2.29.3",
-    "echarts": "^5.4.1",
-    "mavon-editor": "^2.10.4",
     "nanoid": "^4.0.1",
     "pinia": "^2.0.32",
     "qrcode.vue": "^3.3.3",
     "sass": "^1.58.3",
     "vue": "^3.2.47",
-    "vue-advanced-cropper": "^2.8.8",
-    "vue-content-loader": "^2.0.1",
-    "vue-echarts": "^6.5.4",
-    "vue-good-table": "^2.21.11",
-    "vue-qrcode-reader": "^3.1.1",
-    "vue-router": "^4.1.6",
-    "vue-toasted": "^1.1.28",
-    "vuejs-datepicker": "^1.6.2"
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
