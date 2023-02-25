@@ -9,6 +9,7 @@ import NotFound from "../pages/NotFound.vue"
 import Demo from "../demo/Index.vue"
 import MDEditor from "../demo/MDEditor.vue"
 import QRCode from "../demo/QRCode.vue"
+import Flick from "../demo/Flick.vue"
 
 const router = createRouter({
   // hash router /#/
@@ -31,6 +32,10 @@ const router = createRouter({
         {
           path: "qrcode",
           component: QRCode,
+        },
+        {
+          path: "flick",
+          component: Flick,
         },
       ],
     },
