@@ -10,6 +10,7 @@ import Demo from "../demo/Index.vue"
 import MDEditor from "../demo/MDEditor.vue"
 import QRCode from "../demo/QRCode.vue"
 import Flick from "../demo/Flick.vue"
+import Crop from "../demo/Crop.vue"
 
 const router = createRouter({
   // hash router /#/
@@ -37,6 +38,10 @@ const router = createRouter({
           path: "flick",
           component: Flick,
         },
+        {
+          path: "crop",
+          component: Crop
+        }
       ],
     },
     {

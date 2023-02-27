@@ -3,9 +3,9 @@
 </template>
 
 <style scoped>
-  .title {
-    text-align: center;
-    font-size: 20vh;
-    line-height: 100vh;
-  }
+.title {
+  text-align: center;
+  font-size: 20vh;
+  line-height: 100vh;
+}
 </style>
