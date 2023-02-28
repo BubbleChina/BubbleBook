@@ -1,13 +1,13 @@
 <template>
-  <Runner/>
-  <RouterView/>
+  <Runner />
+  <RouterView />
 </template>
 
 <script setup lang="ts">
-import Runner from "./pages/Runner.vue"
-import {RouterView} from "vue-router"
+  import Runner from "./pages/Runner.vue"
+  import { RouterView } from "vue-router"
 
-console.log("Hello")
+  console.log("Hello")
 </script>
 
 <style scoped></style>

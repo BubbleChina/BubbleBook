@@ -1,7 +1,11 @@
 <template>
   <div>Sign in to BUBBLE</div>
-  <div><label>Email:<input/></label></div>
-  <div><label>Password:<input/></label></div>
+  <div>
+    <label>Email:<input /></label>
+  </div>
+  <div>
+    <label>Password:<input /></label>
+  </div>
   <div>
     <RouterLink to="/sign_up">Sign up</RouterLink>
   </div>
@@ -13,12 +17,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "SignIn"
-}
-</script>
+<script setup lang="ts"></script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

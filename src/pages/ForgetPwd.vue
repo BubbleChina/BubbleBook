@@ -2,10 +2,8 @@
 
 </template>
 
-<script>
-export default {
-  name: "ForgetPwd"
-}
+<script setup lang="ts">
+
 </script>
 
 <style scoped>

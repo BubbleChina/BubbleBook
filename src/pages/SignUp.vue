@@ -1,13 +1,5 @@
-<template>
+<template></template>
 
-</template>
+<script setup lang="ts"></script>
 
-<script>
-export default {
-  name: "SignUp"
-}
-</script>
-
-<style scoped>
-
-</style>
+<style scoped></style>

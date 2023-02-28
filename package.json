@@ -11,7 +11,7 @@
     "preview": "vite preview --host 0.0.0.0"
   },
   "dependencies": {
-    "@egjs/vue3-flicking": "^4.10.6",
+    "mitt": "^3.0.0",
     "nanoid": "^4.0.1",
     "pinia": "^2.0.32",
     "qrcode.vue": "^3.3.3",

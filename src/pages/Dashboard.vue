@@ -11,6 +11,7 @@
 <script setup lang="ts">
 import {RouterLink, RouterView} from "vue-router"
 import {watchEffect} from "vue"
+
 import router from "../router"
 
 watchEffect(() => {
