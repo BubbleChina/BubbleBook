@@ -6,9 +6,9 @@
   "type": "module",
   "author": "BUBBLE",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host 0.0.0.0",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview --host 0.0.0.0"
   },
   "dependencies": {
     "@egjs/vue3-flicking": "^4.10.6",
