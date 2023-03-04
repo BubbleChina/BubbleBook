@@ -4,6 +4,9 @@
 node_modules
 dist
 
+.history
+.VSCodeCounter
+
 yarn.lock
 pnpm-lock.yaml
 package-lock.json
