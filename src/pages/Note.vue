@@ -109,29 +109,29 @@
       username: "Taylor",
       title: "1989",
       content: "reputation....",
-      date: "2022-10-29",
+      date: "2022-10-29"
     },
     {
       __id: nanoid(),
       username: "Swift",
       title: "Lover",
       content: "",
-      date: "2021-12-14",
+      date: "2021-12-14"
     },
     {
       __id: nanoid(),
       username: "Bubble",
       title: "Faker",
       content: "for something",
-      date: "2020-11-15",
+      date: "2020-11-15"
     },
     {
       __id: nanoid(),
       username: "China",
       title: "Try",
       content: "If you really try, you'll find there is no need to cry.",
-      date: "2008-12-26",
-    },
+      date: "2008-12-26"
+    }
   ])
 
   const showNote = (): void => {

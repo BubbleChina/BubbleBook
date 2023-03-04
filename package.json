@@ -11,12 +11,17 @@
     "preview": "vite preview --host 0.0.0.0"
   },
   "dependencies": {
-    "mitt": "^3.0.0",
+    "@types/node": "^18.14.2",
+    "@types/nodemailer": "^6.4.7",
+    "animejs": "^3.2.1",
+    "epic-spinners": "^2.0.0",
     "nanoid": "^4.0.1",
+    "nodemailer": "^6.9.1",
     "pinia": "^2.0.32",
     "qrcode.vue": "^3.3.3",
     "sass": "^1.58.3",
     "vue": "^3.2.47",
+    "vue-advanced-cropper": "^2.8.8",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {

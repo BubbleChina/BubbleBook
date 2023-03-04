@@ -1,25 +1,50 @@
 <template>
   <form class="contain" @submit.prevent="demo">
-    <img src="../../public/Logo.svg" class="logo" />
-    <div class="title">{{ title }}{{ bubble < 17 ? "_" : "" }}</div>
+    <RouterLink to="/demo"
+      ><img src="../../public/Logo.svg" class="logo"
+    /></RouterLink>
+    <div class="title">
+      {{ title }}
+      <span class="animation">{{ bubble < 17 ? "_" : "" }}</span>
+    </div>
     <div class="body">
       <div>
-        <input type="text" placeholder="Email" required class="input" />
+        <input
+          type="email"
+          required
+          placeholder="Email"
+          v-model="email"
+          class="input"
+        />
       </div>
       <div>
-        <input type="password" placeholder="Password" required class="input" />
+        <input
+          type="text"
+          placeholder="Verification code"
+          required
+          class="input"
+          v-model="verifiedCode"
+          @change="checkCode"
+        />
       </div>
-      <div>
-        <button>Sign in</button>
+      <div v-if="isSubmit">
+        <button type="submit" title="OK" class="submit">Sign in</button>
       </div>
-      <div>
-        <RouterLink to="/forget_password" style="text-decoration: none"
-          >Forget password?</RouterLink
+      <div v-else>
+        <button
+          type="button"
+          class="send_code"
+          @click.once="verifyDemo"
+          title="Please note that the verification code is only sent once."
         >
-      </div>
-      <div style="font-size: 14px; margin: 0 0 15px 0">
-        New to BUBBLE?
-        <RouterLink to="/sign_up" class="link">Create an account.</RouterLink>
+          {{
+            isVerify
+              ? endTime === 0
+                ? "⚜️"
+                : endTime
+              : "Send verification code"
+          }}
+        </button>
       </div>
     </div>
   </form>
@@ -27,9 +52,24 @@
 
 <script setup lang="ts">
   import { ref, onMounted } from "vue"
+  import router from "../router"
+  import { RouterLink } from "vue-router"
+
+  let email = ref<string>("")
+  let verifiedCode = ref<string | undefined>()
 
   let title = ref<string>("")
   let bubble = ref<number>(0)
+  let isSubmit = ref<boolean>(false)
+  let isVerify = ref<boolean>(false)
+  let endTime = ref<any>(10)
+
+  let red = {
+    color: "red"
+  }
+  let green = {
+    color: "green"
+  }
   onMounted(() => {
     let timer = setInterval(() => {
       bubble.value += 1
@@ -39,7 +79,34 @@
       clearInterval(timer)
     }, 3774)
   })
-  const demo = () => {}
+
+  const checkCode = () => {
+    if (verifiedCode.value === "6666") {
+      isSubmit.value = true
+    } else {
+      isSubmit.value = false
+    }
+  }
+
+  const verifyDemo = () => {
+    isVerify.value = true
+    let timer = setInterval(() => {
+      checkCode()
+      if (verifiedCode.value === "6666") {
+        clearInterval(timer)
+      }
+
+      endTime.value -= 1
+    }, 1000)
+    setTimeout(() => {
+      clearInterval(timer)
+    }, 10000)
+  }
+
+  const demo = () => {
+    window.localStorage.setItem("token", email.value)
+    router.push("/")
+  }
 </script>
 
 <style scoped>
@@ -50,6 +117,31 @@
   .logo {
     width: 15vh;
     margin: 2% 0 2% 0;
+  }
+
+  @keyframes hidden {
+    0% {
+      opacity: 0.7;
+    }
+    16% {
+      opacity: 0.4;
+    }
+    32% {
+      opacity: 0.1;
+    }
+    48% {
+      opacity: 0.4;
+    }
+    64% {
+      opacity: 0.7;
+    }
+    80% {
+      opacity: 1;
+    }
+  }
+
+  .animation {
+    animation-name: hidden 2531ms;
   }
 
   .title {
@@ -76,7 +168,7 @@
     text-align: center;
   }
 
-  button {
+  .submit {
     width: 50%;
     cursor: pointer;
     font-size: 15px;
@@ -85,10 +177,11 @@
     color: white;
     font-weight: bolder;
     border-radius: 10px;
+    margin: 0 0 15px 0;
     transition: 1.3s;
   }
 
-  button:hover {
+  .submit:hover {
     background-color: #e6dada;
     color: black;
     font-weight: lighter;
@@ -99,7 +192,13 @@
     color: rgba(240, 68, 68, 0.613);
     text-decoration: none;
   }
+
   .link:hover {
     text-decoration: underline;
+  }
+
+  .send_code {
+    margin: 0 0 12px 0;
+    padding: 5px;
   }
 </style>
